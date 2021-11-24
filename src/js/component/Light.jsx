@@ -5,9 +5,9 @@ import "bootstrap";
 const TrafficLight = () => {
 	const [color, setColor] = useState("off");
 	let red = "bg-danger rounded-circle";
-	let yellow = "bg-danger rounded-circle";
+	let yellow = "bg-warning rounded-circle";
 	let green = "bg-success rounded-circle";
-	let off = "bg-dark rounded-circle";
+	let off = "bg-secondary rounded-circle";
 
 	return (
 		<div className="box">
@@ -18,14 +18,14 @@ const TrafficLight = () => {
 					<div className={red}></div>
 				)}
 			</div>
-			<div className="light" onClick={() => setColor("red")}>
+			<div className="light" onClick={() => setColor("yellow")}>
 				{color == "red" || color == "green" || color == "off" ? (
 					<div className={off}></div>
 				) : (
 					<div className={yellow}></div>
 				)}
 			</div>
-			<div className="light" onClick={() => setColor("red")}>
+			<div className="light" onClick={() => setColor("green")}>
 				{color == "yellow" || color == "red" || color == "off" ? (
 					<div className={off}></div>
 				) : (
