@@ -7,7 +7,7 @@ const TrafficLight = () => {
 	let red = "bg-danger rounded-circle";
 	let yellow = "bg-warning rounded-circle";
 	let green = "bg-success rounded-circle";
-	let off = "bg-secondary rounded-circle";
+	let off = "bg-dark rounded-circle";
 
 	return (
 		<div className="box">
@@ -15,21 +15,21 @@ const TrafficLight = () => {
 				{color == "yellow" || color == "green" || color == "off" ? (
 					<div className={off}></div>
 				) : (
-					<div className={red}></div>
+					<div className={`glow ${red}`}></div>
 				)}
 			</div>
 			<div className="light" onClick={() => setColor("yellow")}>
 				{color == "red" || color == "green" || color == "off" ? (
 					<div className={off}></div>
 				) : (
-					<div className={yellow}></div>
+					<div className={`glower ${yellow}`}></div>
 				)}
 			</div>
 			<div className="light" onClick={() => setColor("green")}>
 				{color == "yellow" || color == "red" || color == "off" ? (
 					<div className={off}></div>
 				) : (
-					<div className={green}></div>
+					<div className={`glowerest ${green}`}></div>
 				)}
 			</div>
 		</div>
